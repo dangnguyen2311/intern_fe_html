@@ -1,0 +1,213 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+    box-sizing: border-box;
+    font-style: normal;
+}
+.header {
+    display: flex;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+    letter-spacing: 1px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.iconImage{
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.header-social{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30px;
+}
+.header-social nav ul {
+    display: flex;  /* Dàn các <li> theo hàng ngang */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    list-style: none; /* Bỏ dấu chấm */
+    padding: 0;
+    margin: 0;
+}
+.header-social nav ul li{
+    display: flex;
+    text-decoration: none;
+    gap: 20px; /* Khoảng cách giữa các mục */
+    list-style: none; /* Bỏ dấu chấm */
+    padding: 0;
+    margin: 0;
+}
+.header-social nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-searchIcon {
+    display: flex;
+    justify-content: flex-end; /* Đẩy icon về bên phải */
+    /*margin-left: auto; có ảnh hưởng đến các đường dẫn ở giữa*/
+    gap: 15px; /* Khoảng cách giữa các icon */
+}
+/*.header-searchIcon:last-child{*/
+/*    margin-right: 0px; !* Cách cạnh phải 50px *!*/
+/*}*/
+
+.header-searchIcon .icon{
+    width: 20px;
+    height: 20px;
+}
+
+.section-hero {
+    margin-top: 50px;
+    margin-bottom: 500px;
+    width: 100vw; /* Chiều rộng 100% viewport */
+    height: 100vh; /* Chiều cao 100% viewport */
+    /*overflow: hidden; !* Ẩn phần dư thừa *!  ảnh bị crop*/
+}
+.section-hero-image img{
+    width: 100%; /* Chiều rộng bằng toàn bộ viewport */
+    height: 100%; /* Chiều cao bằng toàn bộ viewport */
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    object-fit: contain; /* Cắt ảnh để vừa với khung */
+
+}
+
+/*.section-main {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-top: 50px;*/
+/*}*/
+
+.section-main{
+    display: grid;
+    grid-template-columns: 60% 40%; /* Sidebar - Nội dung chính - Hình ảnh */
+    grid-template-rows: auto ;
+    gap: 20px;
+    padding: 40px;
+    margin-left: 40px;
+}
+
+.section-main .section-main-header h1{
+    color: black;
+    font-size: xx-large;
+}
+.section-main .section-main-header .sidebar{
+    display: grid;
+    grid-template-columns: 30% 70%; /* Sidebar - Nội dung chính - Hình ảnh */
+    /*grid-template-rows: auto ;*/
+    gap: 80px;
+    color: #999999;
+    font-size: small;
+}
+
+.section-main .section-main-header .sidebar .sidebar-content{
+    max-width: 70%; /* Đảm bảo nội dung không vượt quá vùng cha */
+    overflow-wrap: break-word; /* Tự động xuống dòng khi từ quá dài */
+    word-wrap: break-word ;
+    caption-side: inherit;
+}
+
+.section-main .image{
+    margin-left: 40px;
+}
+.section-main .image img{
+    width: 80%; /* Ảnh tự động co giãn theo kích thước của phần tử cha */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng trống thừa nếu có */
+    object-fit: cover;
+}
+
+.section-main2{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Sidebar - Nội dung chính - Hình ảnh */
+    grid-template-rows: auto ;
+    /*gap: 20px;*/
+    /*padding: 40px;*/
+    /*margin-left: 40px;*/
+}
+.section-main2 .image img{
+    width: 100%; /* Ảnh tự động co giãn theo kích thước của phần tử cha */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng trống thừa nếu có */
+    object-fit: cover;
+}
+
+.section-main2 .content {
+    background-color: #F5F5F5;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    font-style: normal;
+    row-gap: normal;
+}
+.section-main2 .content h1{
+    font-size: xxx-large;
+    font-weight: unset;
+}
+.section-main2 .content h3{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.section-main2 .content img{
+    padding-top: 50px;
+}
+
+
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các card */
+    flex-wrap: wrap; /* Đảm bảo responsive */
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial-image {
+    position: relative;
+}
+
+.testimonial-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
