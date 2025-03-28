@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>First Page</title>
-  <link rel="icon" href="/src/img/logo.png" type="image/x-icon" size="32x32">
-  <link rel="stylesheet" href="/src/css/firstPageCSS.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First Page</title>
+    <link rel="icon" href="/src/img/logo.png" type="image/x-icon" size="32x32">
+    <link rel="stylesheet" href="/src/css/firstPageCSS.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header class="header">
-        <div class="header-logo">
-            <img class="iconImage" src="/src/img/logo.png" alt="logo">
+        <div class="header__logo">
+            <img class="header__logo-image" src="/src/img/logo.png" alt="logo">
         </div>
-        <div class="header-social">
-            <nav>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
+        <div class="header__social">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#">Facebook</a></li>
+                    <li class="header__nav-item"><a href="#">Instagram</a></li>
+                    <li class="header__nav-item"><a href="#">Twitter</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="header-searchIcon">
-            <img class="searchIcon icon" src="/src/img/searchIcon.png" alt="searchIcon">
-            <img class="matrixIcon icon" src="/src/img/matrixItem.png" alt="matrixIcon">
+        <div class="header__search">
+            <img class="header__search-icon" src="/src/img/searchIcon.png" alt="searchIcon">
+            <img class="header__search-icon header__search-icon--matrix" src="/src/img/matrixItem.png" alt="matrixIcon">
         </div>
     </header>
-    <section class="section-hero">
-        <div class="section-hero-image">
+
+    <section class="hero">
+        <div class="hero__image">
             <img src="/src/img/mainPage.png" alt="heroImage">
         </div>
     </section>
+    
     <section class="section-main">
-        <header class="section-main-header">
-            <h2>Working hard for something we don’t care about is called stress. Working hard for something we love is called passion</h1>
-            <div class="sidebar">
-                <div class="sidebar-introduce">
-                    <h3>Expand</h3>
-                    <p>Clicking on that link grants permission to a bogus third-party app to possibly access.</p>
+        <header class="section-main__header">
+            <h2 class="section-main__title">Working hard for something we don’t care about is called stress. Working hard for something we love is called passion</h2>
+            <div class="section-main__sidebar">
+                <div class="section-main__sidebar-introduce">
+                    <h3 class="section-main__sidebar-title">Expand</h3>
+                    <p class="section-main__sidebar-text">Clicking on that link grants permission to a bogus third-party app to possibly access.</p>
                 </div>
-                <div class="sidebar-content">
-                    <p>If you are in the market for a computer, there are a number of factors to consider. Will it be used for your home, your office or perhaps even your home office combo? First off, you will need to set a budget for your new purchase before deciding whether to shop for notebook or desktop computers. Many offices use desktop computers because they are not intended to be moved around a lot. In addition, affordability often plays a large role in someone’s decision as to whether to purchase notebook or desktop computers.</p>
-                        
-                    <p>While you are shopping around, it’s important to keep in mind some of the benefits that go along with owning different types of computers. To that end, this article provides five important reasons to purchase desktop computers.</p>
+                <div class="section-main__sidebar-content">
+                    <p class="section-main__sidebar-text">If you are in the market for a computer, there are a number of factors to consider. Will it be used for your home, your office or perhaps even your home office combo? First off, you will need to set a budget for your new purchase before deciding whether to shop for notebook or desktop computers. Many offices use desktop computers because they are not intended to be moved around a lot. In addition, affordability often plays a large role in someone’s decision as to whether to purchase notebook or desktop computers.</p>
+                    <p class="section-main__sidebar-text">While you are shopping around, it’s important to keep in mind some of the benefits that go along with owning different types of computers. To that end, this article provides five important reasons to purchase desktop computers.</p>
                 </div>
             </div>
         </header>
-        <div class="image">
-            <img src="/src/img/sidebar1.png" alt="Photo by Author">
-            <p>Photo by Author</p>
+        <div class="section-main__image">
+            <img class="section-main__image-src" src="/src/img/sidebar1.png" alt="Photo by Author">
+            <p class="section-main__image-caption">Photo by Author</p>
         </div>
     </section>
 
-    <section class="section-main2">
-        <div class="image">
-            <img src="/src/img/sidebar2.png" alt="Photo by Author">
+    <section class="content">
+        <div class="content__image">
+            <img class="content__image-src" src="/src/img/sidebar2.png" alt="Photo by Author">
         </div>
-        <div class="content">
-            <p>Type something</p>
-            <h1>Money-Back Guarantee</h1>
-            <h3>In doing the screenplay for 'Good Night, and Good Luck,' the most important thing for me was to constantly go back to wherever the opposition would argue. So I had to keep reading all the books and articles about why McCarthy is such a good guy.</h3>
-            <img src="/src/img/thuonghieu1.png" alt="ThuongHieu">
+        <div class="content__main">
+            <p class="content__text">Type something</p>
+            <h1 class="content__title">Money-Back Guarantee</h1>
+            <h3 class="content__subtitle">In doing the screenplay for 'Good Night, and Good Luck,' the most important thing for me was to constantly go back to wherever the opposition would argue. So I had to keep reading all the books and articles about why McCarthy is such a good guy.</h3>
+            <img class="content__logo" src="/src/img/thuonghieu1.png" alt="ThuongHieu">
         </div>
     </section>
 
     <section class="testimonials">
-        <div class="testimonials-header">
+        <div class="testimonials__header">
             <h2 style="font-weight: lighter; font-size: xxx-large">What People Say</h2>
-            <p class="subtitle " style="font-weight: lighter; opacity: 0.6; padding-bottom: 30px">The process of philosophic and scientific enlightenment has shaken the stability of beliefs held explicitly as articles of faith.</p>
+            <p class="subtitle" style="font-weight: lighter; opacity: 0.6; padding-bottom: 30px">The process of philosophic and scientific enlightenment has shaken the stability of beliefs held explicitly as articles of faith.</p>
         </div>
 
-        <div class="testimonial-container">
-            <div class="testimonial-card">
-                <div class="testimonial-image">
+        <div class="testimonial__container">
+            <div class="testimonial__card">
+                <div class="testimonial__image">
                     <img src="/src/img/video-thumbnail1.png" alt="Video 1">
-                    <div class="play-button">▶</div>
+                    <div class="testimonial__card__playbutton">▶</div>
                 </div>
                 <img src="/src/img/rounded-icon.png" alt="Profile Icon">
                 <h3>Jordan Welch</h3>
                 <p>If I haven't any talent for writing books or newspaper articles, well, then I can always write for myself.</p>
             </div>
-            <div class="testimonial-card">
-                <div class="testimonial-image">
+            <div class="testimonial__card">
+                <div class="testimonial__image">
                     <img src="/src/img/video-thumbnail1.png" alt="Video 2">
-                    <div class="play-button">▶</div>
+                    <div class="testimonial__card__playbutton">▶</div>
                 </div>
                 <img src="/src/img/rounded-icon.png" alt="Profile Icon">
                 <h3>Sally Gibbs</h3>
                 <p>The cool thing about Snapchat is you can get a lot of news on there now. There's CNN, ESPN, and I find myself</p>
             </div>
-            <div class="testimonial-card">
-                <div class="testimonial-image">
+            <div class="testimonial__card">
+                <div class="testimonial__image">
                     <img src="/src/img/video-thumbnail1.png" alt="Video 3">
-                    <div class="play-button">▶</div>
+                    <div class="testimonial__card__playbutton">▶</div>
                 </div>
                 <img src="/src/img/rounded-icon.png" alt="Profile Icon">
                 <h3>Dominic Zimmerman</h3>
@@ -104,7 +105,7 @@
     </section>
 
     <section class="team">
-        <div class="team-sidebar">
+        <div class="team__sidebar">
             <img src="/src/img/sidebar2.png" alt="Photo by Author">
             <img src="/src/img/sidebar2.png" alt="Photo by Author">
             <img src="/src/img/sidebar2.png" alt="Photo by Author">
@@ -113,25 +114,25 @@
             <img src="/src/img/sidebar2.png" alt="Photo by Author">
 
         </div>
-        <div class="team-main">
-            <h1 style="font-weight: lighter; font-size: larger; color: white">03/06</h1>
-            <h2 style="font-weight: lighter; font-size: larger; color: #999999; margin-top: 50px">DESIGNER</h2>
-            <p style="font-size: x-large; color: white">Leroy Maxwell</p>
-            <h2 style="font-weight: lighter; font-size: larger; color: #999999; margin-top: 30px; margin-right: 50px">Collect Contact details for future ongoing relation.</h2>
+        <div class="team__main">
+            <h2>03/06</h1>
+            <h3 >DESIGNER</h2>
+            <p >Leroy Maxwell</p>
+            <h3 >Collect Contact details for future ongoing relation.</h2>
         </div>
-        <div class="team-slider">
+        <div class="team__slider">
             <img src="/src/img/slider.png" alt="Slider">
         </div>
     </section>
 
     <section class="form">
-        <div class="form-side">
+        <div class="form__side">
             <img src="/src/img/sidebar2.png" alt="Photo by Author">
         </div>
-        <div class="form-main">
-            <h1 style="font-weight: 200; font-size: xxx-large">Get Started Today</h1>
-            <p style="font-weight: 200; font-size: large; color: #999999">Subscribe us to get more info</p>
-            <div class="form-click">
+        <div class="form__main">
+            <h2 >Get Started Today</h1>
+            <p >Subscribe us to get more info</p>
+            <div class="form__click">
                 <img src="/src/img/email-box.png" alt="email-box">
                 <img src="/src/img/subcribe-boxx.png" alt="subcribe-box">
             </div>
@@ -141,8 +142,8 @@
 
     <footer>
         <div class="link">
-            <h3 style="font-weight: 500;padding-bottom: 20px;font-size: larger">Recent Posts</h3>
-            <div class="link-li">
+            <h3 >Recent Posts</h3>
+            <div class="link__li">
                 <nav>
                     <ul>
                         <li><a href="#">Friends</a></li>
@@ -154,8 +155,8 @@
             </div>
         </div>
         <div class="link">
-            <h3 style="font-weight: 500;padding-bottom: 20px;font-size: larger">Popular Posts</h3>
-            <div class="link-li">
+            <h3>Popular Posts</h3>
+            <div class="link__li">
                 <nav>
                     <ul>
                         <li><a href="#">Friends</a></li>
@@ -167,8 +168,8 @@
             </div>
         </div>
         <div class="link">
-            <h3 style="font-weight: 500;padding-bottom: 20px;font-size: larger">Posts Address</h3>
-            <div class="link-li">
+            <h3 >Posts Address</h3>
+            <div class="link__li">
                 <nav>
                     <ul>
                         <li><a href="#">Friends</a></li>
@@ -180,8 +181,8 @@
             </div>
         </div>
         <div class="social">
-            <h3 style="font-weight: 500;padding-bottom: 20px; font-size: larger">Follow us</h3>
-            <div class="social-li">
+            <h3 >Follow us</h3>
+            <div class="social__li">
                 <nav>
                     <ul>
                         <li><a href="#"><img src="/src/img/facebook-icon.png" alt="facebook"></a></li>

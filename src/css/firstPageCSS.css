@@ -1,86 +1,91 @@
 * {
-    font-family: 'Poppins', sans-serif;
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*margin-top: 25px;*/
-    /*margin-bottom: 25px;*/
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
+}
+.body{
+    margin: 0;
+    padding: 0;
 }
 .header {
     display: flex;
     font-style: normal;
+    font-size: 13.47px;
     font-family: 'Poppins', sans-serif;
     color: #999999;
     letter-spacing: 1px;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 40px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 30px 100px 0 100px;
 }
 
-.iconImage{
+.header__logo-image {
     display: flex;
-    width: 30px;
-    height: 30px;
+    width: 50%;
+    height: auto;
+    /* box-sizing: border-box; */
 }
 
-.header-social{
+.header__social {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     gap: 30px;
 }
-.header-social nav ul {
-    display: flex;  /* Dàn các <li> theo hàng ngang */
+
+.header__nav-list {
+    display: flex; /* Dàn các <li> theo hàng ngang */
     gap: 20px; /* Khoảng cách giữa các mục */
     list-style: none; /* Bỏ dấu chấm */
     padding: 0;
     margin: 0;
 }
-.header-social nav ul li{
+
+.header__nav-item {
     display: flex;
-    text-decoration: none;
     gap: 20px; /* Khoảng cách giữa các mục */
     list-style: none; /* Bỏ dấu chấm */
     padding: 0;
     margin: 0;
 }
-.header-social nav ul li a{
+
+.header__nav-item a {
     text-decoration: none;
     color: inherit;
 }
 
-.header-searchIcon {
+.header__search {
     display: flex;
     justify-content: flex-end; /* Đẩy icon về bên phải */
-    /*margin-left: auto; có ảnh hưởng đến các đường dẫn ở giữa*/
     gap: 15px; /* Khoảng cách giữa các icon */
 }
-/*.header-searchIcon:last-child{*/
-/*    margin-right: 0px; !* Cách cạnh phải 50px *!*/
-/*}*/
-.header-searchIcon .icon{
+
+.header__search-icon {
     width: 20px;
     height: 20px;
 }
-.section-hero {
+
+/* .header__search-icon--matrix {
+     Nếu có thêm style riêng cho matrix icon, có thể thêm ở đây 
+} */
+
+.hero {
     margin-top: 50px;
     margin-bottom: 50px;
-    /* width: 100vw; 
-    height: 100vh;  */
-    /*overflow: hidden; !* Ẩn phần dư thừa *!  ảnh bị crop*/
+    max-width: 100%; /* Giới hạn chiều rộng của .hero */
+    overflow: hidden; /* Ẩn phần dư thừa nếu cần */
 }
-.section-hero-image img{
-    width: 100%; 
-    height: auto; 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    object-fit: cover; /* Cắt ảnh để vừa với khung */
 
+.hero__image {
+    max-width: 100%; /* Giới hạn chiều rộng của div chứa ảnh */
+}
+
+.hero__image img { /* Áp dụng style trực tiếp cho <img> */
+    display: block; /* Loại bỏ khoảng cách inline */
+    max-width: 100%; /* Ảnh không vượt quá container */
+    height: auto; /* Giữ tỷ lệ gốc */
+    object-fit: contain; /* Giữ tỷ lệ, không bị méo */
 }
 
 /*.section-main {*/
@@ -90,26 +95,26 @@
 /*    margin-top: 50px;*/
 /*}*/
 
-.section-main{
+.section-main {
     display: grid;
     grid-template-columns: 60% 40%; /* Sidebar - Nội dung chính - Hình ảnh */
-    grid-template-rows: auto ;
+    grid-template-rows: auto;
     gap: 20px;
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 50px;
-    /* margin-left: 40px; */
 }
 
-.section-main .section-main-header h2{
+.section-main__title {
     color: black;
     font-size: xx-large;
     padding-left: 50px;
+    padding-bottom: 50px;
 }
-.section-main .section-main-header .sidebar{
+
+.section-main__sidebar {
     display: grid;
     grid-template-columns: 30% 70%; /* Sidebar - Nội dung chính - Hình ảnh */
-    /*grid-template-rows: auto ;*/
     justify-content: space-between;
     align-items: stretch;
     gap: 50px;
@@ -118,14 +123,14 @@
     font-size: small;
 }
 
-.section-main .section-main-header .sidebar .sidebar-content{
+.section-main__sidebar-content {
     max-width: 70%; /* Đảm bảo nội dung không vượt quá vùng cha */
     overflow-wrap: break-word; /* Tự động xuống dòng khi từ quá dài */
-    word-wrap: break-word ;
+    word-wrap: break-word;
     caption-side: inherit;
 }
 
-.section-main .image{
+.section-main__image {
     display: flex;
     padding-right: 70px;
     justify-content: space-between;
@@ -137,22 +142,23 @@
     object-fit: cover;
 } */
 
-.section-main2{
+.content {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Sidebar - Nội dung chính - Hình ảnh */
-    grid-template-rows: auto ;
+    grid-template-rows: auto;
     /*gap: 20px;*/
     /*padding: 40px;*/
     /*margin-left: 40px;*/
 }
-.section-main2 .image img{
+
+.content__image-src {
     width: 100%; /* Ảnh tự động co giãn theo kích thước của phần tử cha */
     height: auto; /* Giữ tỷ lệ khung hình */
     display: block; /* Loại bỏ khoảng trống thừa nếu có */
     object-fit: cover;
 }
 
-.section-main2 .content {
+.content__main {
     background-color: #F5F5F5;
     padding-left: 100px;
     padding-right: 100px;
@@ -160,20 +166,22 @@
     font-style: normal;
     row-gap: normal;
 }
-.section-main2 .content h1{
+
+.content__title {
     font-size: xxx-large;
     font-weight: unset;
 }
-.section-main2 .content h3{
+
+.content__subtitle {
     font-size: 15px;
     font-weight: lighter;
 }
-.section-main2 .content img{
+
+.content__logo {
     padding-top: 40px;
     width: 80%;
     height: auto;
 }
-
 
 .testimonials {
     display: flex;
@@ -189,7 +197,7 @@
     
 }
 
-.testimonial-container {
+.testimonial__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -199,7 +207,7 @@
 }
 
 
-.testimonial-card {
+.testimonial__card {
     background: #fff;
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -211,19 +219,19 @@
     font-weight: lighter;
     overflow: hidden;
 }
-.testimonial-card p{
+.testimonial__card p{
     opacity: 60%;
     padding-inline: 10px;
 }
-.testimonial-image {
+.testimonial__image {
     position: relative;
 }
 
-.testimonial-image img {
+.testimonial__image img {
     width: 100%;
     border-radius: 0;
 }
-.testimonial-card img[alt="Profile Icon"]{
+.testimonial__card img[alt="Profile Icon"]{
     width: 20%;
     height: auto;
     transform: translateY(-50%);
@@ -237,7 +245,7 @@
 } */
 
 
-.play-button {
+.testimonial__card__playbutton {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -250,6 +258,7 @@
     cursor: pointer;
 }
 
+
 .team{
     display: grid;
     grid-template-columns: 65% 35%;
@@ -261,7 +270,7 @@
     background-color: #F5F5F5;
     position: relative;
 }
-.team-sidebar{
+.team__sidebar{
     /* margin-left: 50px; */
     display: grid;
     padding-left: 100px;
@@ -269,12 +278,12 @@
     grid-template-rows: repeat(2, auto);  /* 2 hàng */
     gap: 20px; 
 }
-.team-sidebar img {
+.team__sidebar img {
     width: 100%; /* Kích thước ảnh */
     height: auto;
     object-fit: cover; /* Cắt ảnh vừa khung */
 }
-.team-main{
+.team__main{
     display: flex;
     flex-direction: column;
     margin-right: 100px;
@@ -283,7 +292,22 @@
     padding-right: 100px;
     padding-top: 70px;
 }
-.team-slider {
+.team__main h2{
+    font-weight: lighter; 
+    font-size: larger; 
+    color: white;
+}
+.team__main p{
+    font-size: x-large; 
+    color: white;
+}
+.team__main h3{
+    font-weight: lighter; 
+    font-size: larger; 
+    color: #999999; 
+    margin-top: 50px;
+}
+.team__slider {
     padding-top: 690px;
     position: absolute;
     top: 50%;
@@ -292,10 +316,13 @@
     width: 50%;
     max-width: 600px;
 }
-.team-slider img {
+.team__slider img {
     width: 15%;
     height: auto;
 }
+
+
+
 
 .form{
     display: grid;
@@ -303,38 +330,47 @@
     /*gap: 30px;*/
     padding-left: 100px;
 }
-.form .form-side img{
+.form__side img{
     width: 80%;
     height: auto;
     object-fit: fill;
     padding-bottom: 50px;
     padding-top: 50px;
 }
-.form .form-main{
+.form__main{
     display: flex;
     flex-direction: column;
     padding-left: 100px;
     padding-top: 50px;
 
 }
-.form-click{
+.form__main h2{
+    font-weight: 200; 
+    font-size: xxx-large;
+}
+.form__main p{
+    font-weight: 200; 
+    font-size: large; 
+    color: #999999;
+}
+.form__click{
     padding-top: 20px;
     display: flex;
     flex-basis: fit-content;
     flex-direction: row;
     gap: 20px;
 }
-.form-click img{
+.form__click img{
     width: 35%;
     height: auto;
 }
+
 
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: auto;
-    padding-left: 100px;
-    padding-top: 50px;
+    padding: 50px 100px 50px 100px;
     background-color: #F5F5F5;
 }
 footer .link{
@@ -342,12 +378,15 @@ footer .link{
     flex-direction: column;
     gap: 20px;
 }
+.link h3{
+    font-weight: 500;padding-bottom: 20px;font-size: larger;
+}
 footer nav li{
     display: flex;  /* Dàn các <li> theo hàng ngang */
     /* Khoảng cách giữa các mục */
     list-style: none; /* Bỏ dấu chấm */
 }
-.link-li {
+.link__li {
 
     display: flex;
     flex-direction: column; /* Xếp theo chiều dọc */
@@ -355,35 +394,39 @@ footer nav li{
     opacity: 60%;
 }
 
-.link-li nav ul {
+.link__li nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.link-li nav ul li {
+.link__li nav ul li {
     margin-bottom: 5px; /* Khoảng cách giữa các mục */
 }
 
-.link-li nav ul li a {
+.link__li nav ul li a {
     text-decoration: none;
     color: black;
 }
 
+.social h3{
+    font-weight: 500;padding-bottom: 20px; font-size: larger;
+}
 
-.social-li nav ul {
+.social__li nav ul {
     display: flex; /* Dàn hàng ngang */
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 10px; /* Khoảng cách giữa các icon */
 }
 
-.social-li nav ul li {
+.social__li nav ul li {
     display: inline-block; /* Đảm bảo các icon không bị lỗi */
 }
 
-.social-li nav ul li a img {
+.social__li nav ul li a img {
     width: 32px; /* Điều chỉnh kích thước icon */
     height: 32px;
 }
