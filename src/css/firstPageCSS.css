@@ -23,7 +23,7 @@
   padding: 1rem 2rem 1rem 2rem;
   /* Responsive for larger screens */
 }
-.header__logo-image {
+.header svg {
   grid-area: "logo";
   width: 20%;
   height: auto;
@@ -60,9 +60,9 @@
     align-items: center;
     text-align: left;
     padding: 2rem 5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  .header__logo-image {
+  .header svg {
     width: 20%;
   }
   .header__social {

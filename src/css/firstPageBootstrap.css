@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+}
+
+h2, p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.textOpacity {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.form .d-flex {
+  gap: 1rem; /* Khoảng cách giữa input và button */
+}
+
+.form .form-control {
+  flex: 1; /* Đảm bảo rằng input chiếm không gian còn lại */
+}
+
+.form .btn {
+  flex-shrink: 0; /* Đảm bảo rằng button không bị thu nhỏ */
+}
+
+/* Đảm bảo kích thước button và input đồng đều trên các màn hình lớn hơn */
+@media (min-width: 768px) {
+  .form .d-flex {
+    gap: 1.5rem; /* Khoảng cách lớn hơn trên màn hình lớn */
+  }
+}
+.input {
+  border-radius: 0;
+  border-color: #3B00DD;
+  font-size: medium;
+  padding: 1rem;
+}
+
+.btn {
+  background-color: #3B00DD;
+  padding: 1rem;
+  font-size: medium;
+  border-radius: 0;
+}/*# sourceMappingURL=firstPageBootstrap.css.map */
